@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="main-content card-display">
+<div class="space-card card border-success mb-3" style="max-width: 30rem;">
+  <div class="card-header">Categories</div>
+  <div class="card-body">
+    {%for category in categories%}
+
+      <p class="card-text"><a href="{{url_for('showItems', category_name=category.name)}}">{{category.name}}</a></p>
+    {%endfor%}
+      <a href="{{url_for('addCategory')}}" class="card-link">Add Category</a>
+  </div>
+</div>
+
+<div class="space-card card border-success mb-3" style="max-width: 30rem;">
+  <div class="card-header">Latest Items</div>
+  <div class="card-body">
+    <!-- <h4 class="card-title">Success card title</h4> -->
+    {%for item in latest_items%}
+    <p  class="card-text">
+      <a href="{{url_for('itemDescription', category_name=item[1], item_title=item[0])}}">{{item[0]}} </a>
+      <small class="text-muted">({{item[1]}})</small>
+    </p>
+    {%endfor%}
+    <a href="{{url_for('addItem')}}" class="card-link">Add Item</a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

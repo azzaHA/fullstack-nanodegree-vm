@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="main-content">
+
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title">{{item.title}}</h1>
+      <h4 class="card-subtitle mb-2 text-muted">{{'Category: %s' % category_name}}</h4>
+      <p class="card-text">{{'Description: %s' % item.description}}</p>
+      <a href="{{url_for('editItem', item_title=item.title)}}" class="card-link">Edit</a>
+      <a href="{{url_for('deleteItem', item_title=item.title)}}" class="card-link">Delete</a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="main-content">
+  <form method="post" action="{{url_for('deleteItem', item_title=item_title)}}">
+	<fieldset>
+		<legend>Delete Item</legend>
+
+    <h3>{{item_title}}</h3>
+    <p>Are you sure you want to delete {{item_title}}?</p>
+
+		<button type="submit" class="btn btn-primary">Delete</button>
+    <a href = "{{url_for('showCategories')}}">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel
+    </a>
+
+	</fieldset>
+	</form>
+
+</div>
+{% endblock %}

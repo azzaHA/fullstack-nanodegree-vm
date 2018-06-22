@@ -1,0 +1,17 @@
+body {
+background-color:#e2efeb;
+}
+
+.main-content{
+	margin: 10px;
+	background-color:#e2efeb;
+}
+
+.card-display{
+	display: flex;
+	justify-content: center;
+}
+
+.space-card{
+	margin: 5px;
+}

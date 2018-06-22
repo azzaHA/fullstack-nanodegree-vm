@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container h2">
+    <a class="" href="{{url_for('showCategories')}}" id="navbarColor01">
+      <span class="glyphicon glyphicon-home" aria-hidden="true"> </span> Catalog App
+    </a>
+
+    <div  id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          {%if 'username' not in session %}
+      <a class="nav-link" href="{{url_for('showLogin')}}">
+        <span class="glyphicon glyphicon-log-in"> </span> Login
+      </a>
+      {% else %}
+      <a class="nav-link" href="{{url_for('gdisconnect')}}">
+        <span class="glyphicon glyphicon-log-out"> </span> Logout</a>
+      {% endif %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

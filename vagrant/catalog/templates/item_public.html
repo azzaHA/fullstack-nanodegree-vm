@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="main-content">
+
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title">{{item.title}}</h1>
+      <h4 class="card-subtitle mb-2 text-muted">{{'Category: %s' % category_name}}</h4>
+      <p class="card-text">{{'Description: %s' % item.description}}</p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

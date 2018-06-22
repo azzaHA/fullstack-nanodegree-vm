@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="main-content">
+  <div class="alert alert-dismissible alert-light">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Stop!</h4>
+  <p class="mb-0">Sorry! You don't have permission to {{message}}.</p>
+  <a href="{{url_for('showCategories')}}" class="alert-link">Home page</a>
+</div>
+
+</div>
+{% endblock %}
