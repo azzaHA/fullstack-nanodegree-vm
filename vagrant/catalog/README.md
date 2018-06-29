@@ -1,4 +1,4 @@
-# Catalog App Web Application
+# Catalog Items Web Application
 The application provides a list of items within a variety of categories as well as providing a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.
 
 # Prerequisites
